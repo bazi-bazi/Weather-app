@@ -9,7 +9,7 @@ function App() {
       <div className="wrapper">
         <h1>-Weather App-</h1>
             <Search />
-          <div className="container">
+          <div className="container daily">
              <Daily />
           </div>
           <div className="container weekly">
