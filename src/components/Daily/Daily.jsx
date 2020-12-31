@@ -1,5 +1,6 @@
 import React from "react"
 import "./daily.css"
+import sun from "../../img/sun.svg"
 
 const Daily = () => {
   return (
@@ -10,12 +11,12 @@ const Daily = () => {
          <p className="info__date">00/00/13</p>
          <p className="info__wind">wind 6km/h</p>
        </div>
-       <div>
-         <div>
-           <img src="#" alt="weather icon" />
-           <p>partly cloudly</p>
+       <div className="daily__text">
+         <div className="daily__weather">
+           <img src={sun} alt="weather icon" />
+           <p className="weather__text">partly cloudly</p>
          </div>
-         <p>22</p>
+         <p className="weather__number">22&#176;</p>
        </div>
     </div>
   )

@@ -1,9 +1,14 @@
 .daily {
+  box-sizing: border-box;
   display: flex;
+  position: relative;
 }
 
-.info {
+.info { 
+  display: flex;
   width: 50%;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .info__city {
@@ -12,7 +17,7 @@
   margin: 0;
   text-transform: uppercase;
   float: left;
-  padding-right: 100%;
+
 }
 
 .info__name {
@@ -21,8 +26,6 @@
   font-weight: 300;
   text-transform: uppercase;
   margin: 0;
-  float: left;
-  padding-right: 100%;
 }
 
 .info__date {
@@ -31,8 +34,6 @@
   font-weight: 300;
   text-transform: uppercase;
   margin: 0;
-  float: left;
-  padding-right: 100%;
   margin-top: 5px;
 }
 
@@ -42,7 +43,35 @@
   font-weight: 300;
   text-transform:capitalize;
   margin: 0;
-  float: left;
   margin-top: 5px;
+}
+
+img {
+  width: 200px;
+  
+}
+
+.weather__text {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 200;
+  padding-top: 10px;
+  text-transform: uppercase;
+}
+
+.daily__text {
+  position: absolute;
+  display: flex;
+  align-items:flex-end;
+  top: 100px;
+  left: 230px;
+  bottom: 0px;
+}
+
+.weather__number {
+  color: #fff;
+  font-size: 8.5rem;
+  font-weight: 700;
+  padding-left: 50px;
 }
 
