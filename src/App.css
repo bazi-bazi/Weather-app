@@ -18,13 +18,13 @@ h1 {
 .wrapper {
   min-width: 85%;
   text-align: center;
-  padding-top: 5%;
+  padding-top: 3%;
 }
 
 .container {
   position: relative;
   margin: auto;
-  padding: 35px;
+  padding: 30px;
   border-radius: 10px;
   width: 40%;
   background-color:#ffffff60;
@@ -46,8 +46,9 @@ h1 {
 }
 
 .weekly {
-  min-height: 170px;
-  margin-top: 30px;
+  min-height: 100px;
+  margin-top: 20px;
+  padding-top: 0px;
   z-index: 2;
 }
 

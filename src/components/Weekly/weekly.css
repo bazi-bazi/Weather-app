@@ -1,0 +1,36 @@
+.weekly {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-between;
+  align-content: space-between;
+}
+
+.weekly__icon {
+  width: 70px;
+}
+
+.weekly__content {
+
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.weekly__title {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 200;
+  padding-top: 10px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+.weekly__number {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 200;
+  padding-top: 10px;
+  text-transform: uppercase;
+  padding-top: 10px;
+}
