@@ -1,7 +1,6 @@
 .daily {
   box-sizing: border-box;
   display: flex;
-  position: relative;
 }
 
 .info { 
@@ -60,12 +59,8 @@ img {
 }
 
 .daily__text {
-  position: absolute;
   display: flex;
   align-items:flex-end;
-  top: 100px;
-  left: 230px;
-  bottom: 0px;
 }
 
 .weather__number {
@@ -75,3 +70,23 @@ img {
   padding-left: 50px;
 }
 
+
+/* @media (max-width: 1350px) {
+  .daily__text {
+    margin-left: -80px;
+  }
+
+  img {
+    
+    width: 150px;
+  }
+
+  .weather__text {
+    font-size: 1rem;
+  }
+
+  .weather__number {
+    margin-left: -30px;
+    font-size: 4rem;
+  }
+} */

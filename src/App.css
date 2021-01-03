@@ -6,6 +6,7 @@
   font-family: 'Lato', sans-serif;
   padding: 0;
   margin:0;
+  overflow-x:hidden;
 }
 
 h1 {
@@ -63,3 +64,18 @@ h1 {
   margin: auto;
   width: 50%;
 }
+
+
+@media (max-width: 1350px) {
+  .container {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1237px) {
+  .container {
+    width: 70%;
+  }
+}
+
+
