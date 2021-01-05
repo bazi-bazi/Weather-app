@@ -45,9 +45,10 @@
   margin-top: 5px;
 }
 
-img {
-  width: 200px;
-  
+.icons {
+  font-size: 160px;
+  color:#fff;
+  margin-bottom: 40px;
 }
 
 .weather__text {
