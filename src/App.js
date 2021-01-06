@@ -15,12 +15,18 @@ const App = (props) => {
   });
 
   const [city, setCity] = useState()
+  const [wind, setWind] = useState()
+  const [description, setDescription] = useState()
+  const [temp, setTemp] = useState()
 
   const getData = async () => {
     const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}` );
     const data = await response.json();
     setCity(data.name);
-    console.log(city);
+    setWind(data.wind.speed);
+    setDescription(data.weather[0].description);
+    setTemp(Math.floor(data.main.temp - 273.15))
+    console.log(data);
   }
 
   return (
@@ -31,7 +37,7 @@ const App = (props) => {
             <Search />
           </div>
           <div className="container daily">
-              <Daily city={city}/>
+              <Daily city={city} wind={wind} description={description} temp={temp}/>
           </div>
           <div className="container weekly">
             <Weekly />
