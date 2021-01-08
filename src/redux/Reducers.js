@@ -1,14 +1,15 @@
 
+
 const initialstate = {
-  test: "not clicked"
+  cityName: "Tbilisi"
 }
 
 const weatherReducer = (state = initialstate, action) => {
   switch (action.type) {
-    case "ADD_DAILY":
+    case "CITY_NAME":
       return {
         ...state,
-        test: "clicked"
+        cityName: action.payload
       }
       default:
         return state

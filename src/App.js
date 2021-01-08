@@ -4,10 +4,11 @@ import Search from "./components/Search"
 import Daily from "./components/Daily"
 import Weekly from "./components/Weekly"
 import "weather-icons/css/weather-icons.css"
-
+import { useSelector } from "react-redux"
 
 const App = (props) => {
-
+  let newCity = useSelector((state) => state.cityName);
+  console.log(newCity)
   const apiKey = '0e87c50f5a62e1f5bd8a60ecb0238aef';
 
   useEffect(() => {
@@ -20,7 +21,7 @@ const App = (props) => {
   const [temp, setTemp] = useState()
 
   const getData = async () => {
-    const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}` );
+    const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${newCity}&appid=${apiKey}` );
     const data = await response.json();
     setCity(data.name);
     setWind(data.wind.speed);

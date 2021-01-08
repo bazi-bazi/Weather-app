@@ -1,7 +1,8 @@
+export const CITY_NAME = "CITY_NAME";
 
-
-export const addDaily = () => {
+export const cityName = (city) => {
   return {
-    type: "ADD_DAILY"
+    type: "CITY_NAME",
+    payload: city,
   }
 }
