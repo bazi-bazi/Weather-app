@@ -8,9 +8,10 @@ import { useSelector } from "react-redux"
 
 const App = (props) => {
   let newCity = useSelector((state) => state.cityName);
+
   console.log(newCity)
   const apiKey = '0e87c50f5a62e1f5bd8a60ecb0238aef';
-
+  
   useEffect(() => {
     getData();
   });

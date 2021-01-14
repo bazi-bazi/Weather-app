@@ -11,6 +11,7 @@ const Search =()=> {
    const handleSubmit =(e) => {
       e.preventDefault();
       dispatch({type: CITY_NAME, payload: city})
+      e.target.reset();
     }
 
   return (
