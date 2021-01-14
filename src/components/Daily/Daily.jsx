@@ -2,7 +2,7 @@ import React from "react"
 import "./daily.css"
 import moment from 'moment';
 
-const Daily = ({city, wind, description, temp}) => {
+const Daily = ({city, wind, description, temp, icon}) => {
   const moment = require('moment');
 
   let date = moment().subtract(10, 'days').calendar();
@@ -22,7 +22,7 @@ const Daily = ({city, wind, description, temp}) => {
        </div>
        <div className="daily__text">
          <div className="daily__weather">
-           <i className="wi wi-night-sleet icons" alt="weather icon"></i>
+           <i className={`wi ${icon} icons`} alt="weather icon"></i>
            <p className="weather__text">{description}</p>
          </div>
          <p className="weather__number">{temp}&#176;</p>
