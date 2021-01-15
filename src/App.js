@@ -21,6 +21,7 @@ const App = (props) => {
   const [description, setDescription] = useState()
   const [temp, setTemp] = useState()
   const [iconid, setIconid] = useState()
+
  
 
 
@@ -32,20 +33,8 @@ const App = (props) => {
     setDescription(data.weather[0].description);
     setTemp(Math.floor(data.main.temp - 273.15))
     setIconid(data.weather[0].id)
-    console.log(data);
+    console.log(iconid)
   }
-
-  const getWeather = {
-      Thunderstorm: "wi-thunderstorm",
-      Drizzle: "wi-sleet",
-      Rain: "wi-storm-showers",
-      Snow: "wi-snow",
-      Atmosphere: "wi-fog",
-      Sunny: "wi-day-sunny",
-      Clouds: "wi-day-fog"
-  }
-
-
 
   return (
     <div className="App">
@@ -55,7 +44,21 @@ const App = (props) => {
             <Search />
           </div>
           <div className="container daily">
-              <Daily city={city} wind={wind} description={description} temp={temp} icon={getWeather.Sunny}/>
+              <Daily 
+              city={city} 
+              wind={wind} 
+              description={description} 
+              temp={temp}
+              icon={
+                (iconid >= 200 && iconid < 232) ? "wi-thunderstorm" : 
+                (iconid >= 300 && iconid < 321) ? "wi-sleet" :
+                (iconid >= 500 && iconid < 521) ? "wi-storm-showers" : 
+                (iconid >= 600 && iconid < 622) ? "wi-snow" : 
+                (iconid >= 701 && iconid < 781) ? "wi-fog" : 
+                (iconid === 800) ? "wi-day-sunny" : 
+                (iconid >= 801 && iconid < 804) ? "wi-day-fog" :  
+              "wi-day-sunny"
+              }/>
           </div>
           <div className="container weekly">
             <Weekly />
