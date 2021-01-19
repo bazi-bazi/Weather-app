@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Search from "./components/Search"
 import Daily from "./components/Daily"
-import Weekly from "./components/Weekly"
+import Cities from "./components/Cities"
 import "weather-icons/css/weather-icons.css"
 import { useSelector } from "react-redux"
 
@@ -61,7 +61,7 @@ const App = (props) => {
               }/>
           </div>
           <div className="container weekly">
-            <Weekly/>
+            <Cities />
           </div>
       </div>
      </div>
