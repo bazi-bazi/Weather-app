@@ -11,10 +11,13 @@
   width: 70px;
 }
 
-.weekly__content {
+.cities__icon {
+  color: white;
+}
 
+.weekly__content {
   flex-grow: 1;
-  padding: 20px;
+  padding: 40px;
 }
 
 .weekly__title {
@@ -33,4 +36,16 @@
   padding-top: 10px;
   text-transform: uppercase;
   padding-top: 10px;
+}
+
+@media (max-width: 1037px) {
+  .weekly__content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 811px) {
+  .weekly__content {
+    padding: 10px;
+  }
 }

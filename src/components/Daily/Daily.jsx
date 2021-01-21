@@ -22,7 +22,7 @@ const Daily = ({city, wind, description, temp, icon}) => {
        </div>
        <div className="daily__text">
          <div className="daily__weather">
-           <i className={`wi ${icon} icons`} alt="weather icon"></i>
+           <i className={`wi ${icon} icons weather__icon`} alt="weather icon"></i>
            <p className="weather__text">{description}</p>
          </div>
          <p className="weather__number">{temp}&#176;</p>

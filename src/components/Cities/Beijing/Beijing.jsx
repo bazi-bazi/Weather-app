@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import '../cities.css'
-import sun from "../../../img/sun.svg"
+import beijingimg from "../../../img/beijing.svg"
 
 const Beijing =()=> {
   const BEIJING_KEY = '3f1f6d8e6be4128e6478e9afe1abeffd';
@@ -20,7 +20,7 @@ const Beijing =()=> {
   return (
     <div className="weekly__content">
         <p className="weekly__title">Beijing</p>
-        <img src={sun} alt="tuesday" className="weekly__icon" />
+        <img src={beijingimg} alt="tuesday" className="weekly__icon cities__icon" />
         <p className="weekly__number">{beijing}&#176;</p>
       </div>
   )

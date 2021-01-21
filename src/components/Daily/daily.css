@@ -71,23 +71,37 @@
   padding-left: 50px;
 }
 
-
-/* @media (max-width: 1350px) {
+@media (max-width: 1003px) {
   .daily__text {
-    margin-left: -80px;
+    margin-top: 180px;
+    margin-left: -140px;
+    align-items:flex-start;
+    z-index: 999;
   }
 
-  img {
-    
-    width: 150px;
-  }
+}
 
-  .weather__text {
-    font-size: 1rem;
-  }
-
+@media (max-width: 1003px) {
   .weather__number {
-    margin-left: -30px;
-    font-size: 4rem;
+    padding-top: 100px;
+    font-size: 5rem;
+    padding-left: 20px;
   }
-} */
+
+}
+
+@media (max-width: 661px) {
+  .weather__number {
+    padding-top: 100px;
+    font-size: 4rem;
+    padding-left: 2px;
+  }
+
+  .daily__text {
+    margin-top: 220px;
+    margin-left: -170px;
+    align-items:flex-start;
+    z-index: 999;
+  }
+
+}
