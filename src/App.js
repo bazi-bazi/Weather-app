@@ -6,7 +6,7 @@ import Cities from "./components/Cities"
 import "weather-icons/css/weather-icons.css"
 import { useSelector } from "react-redux"
 
-const App = (props) => {
+const App = () => {
   let newCity = useSelector((state) => state.cityName);
 
   const apiKey = '0e87c50f5a62e1f5bd8a60ecb0238aef';
@@ -28,7 +28,7 @@ const App = (props) => {
   const getData = async () => {
     const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${newCity}&appid=${apiKey}` );
     const data = await response.json();
-    setCity(data.name);
+    setCity(data.name); 
     setWind(data.wind.speed);
     setDescription(data.weather[0].description);
     setTemp(Math.floor(data.main.temp - 273.15))
