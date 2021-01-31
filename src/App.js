@@ -28,13 +28,14 @@ const App = () => {
   const getData = async () => {
     const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${newCity}&appid=${apiKey}` );
     const data = await response.json();
-    setCity(data.name); 
+    setCity(data.name);
     setWind(data.wind.speed);
     setDescription(data.weather[0].description);
     setTemp(Math.floor(data.main.temp - 273.15))
     setIconid(data.weather[0].id)
   }
 
+  const newWind = "NuN"
 
   return (
     <div className="App">

@@ -2,10 +2,11 @@ import React from "react"
 import "./daily.css"
 import moment from 'moment';
 
+
 const Daily = ({city, wind, description, temp, icon}) => {
   const moment = require('moment');
 
-  let date = moment().subtract(10, 'days').calendar();
+  let date = moment().format('LL'); 
 
 
   const now = new Date();
